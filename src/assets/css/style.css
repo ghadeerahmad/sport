@@ -1,0 +1,85 @@
+.loader {
+    width: 48px;
+    height: 48px;
+    border: 5px solid;
+    border-color: #FF3D00 transparent;
+    border-radius: 50%;
+    display: inline-block;
+    box-sizing: border-box;
+    animation: rotation 1s linear infinite;
+}
+
+.hero-text h1,
+.hero-text p {
+    animation-name: fadeRight;
+    animation-duration: 2s;
+}
+
+.hero-image {
+    width: 100%;
+    animation-name: fadeLeft;
+    animation-duration: 2s;
+
+}
+
+.hero-text {
+    text-align: center;
+    text-transform: capitalize;
+}
+
+.hero-text h1 {
+    font-weight: bold;
+}
+
+@media (min-width:600px) {
+    .hero-text h1 {
+        font-size: 50pt;
+    }
+
+    .hero-text {
+        text-align: left;
+    }
+
+    .hero-text p {
+        font-size: 30pt;
+    }
+
+    .hero-image {
+        width: auto;
+        height: 100vh;
+    }
+}
+
+@keyframes fadeRight {
+    0% {
+        opacity: 0;
+        transform: translateX(100px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes fadeLeft {
+    0% {
+        opacity: 0;
+        transform: translateX(-100px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes rotation {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
