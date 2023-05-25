@@ -10,7 +10,8 @@
 }
 
 .hero-text h1,
-.hero-text p {
+.hero-text p,
+.hero-text button {
     animation-name: fadeRight;
     animation-duration: 2s;
 }

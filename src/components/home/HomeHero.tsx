@@ -1,3 +1,4 @@
+import { Button } from '@mui/material';
 import Hero from '../../assets/images/hero.png';
 
 export default function HomeHero() {
@@ -15,6 +16,7 @@ export default function HomeHero() {
                     <div className='hero-text'>
                         <h1>Football news</h1>
                         <p>all football new are now in one place</p>
+                        <Button variant='contained' color='primary'>Get Started</Button>
                     </div>
 
                 </div>
