@@ -5,7 +5,7 @@ import { useGetLeagueFixturesMutation } from "../../redux/slice/fixtures"
 import { Container } from "react-bootstrap"
 import LoadingSpinner from "../../components/LoadingSpinner"
 export default function HomeFixtures() {
-    const [leagues, setLeagues] = useState([])
+    const [leagues, setLeagues] = useState<any[]>([])
     const [loadingLeagues, setLoadingLeagues] = useState(true)
     // const [fetchFixtures, { isLoading: isLoading }] = useGetLeagueFixturesMutation()
     const [fetchLeague] = useGetLeagueFixturesMutation()
@@ -31,6 +31,15 @@ export default function HomeFixtures() {
     return (
         <>
             {loadingLeagues && <Container style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', height: '100vh' }}><LoadingSpinner /></Container>}
+            {!loadingLeagues &&
+                <Container>
+                    {
+                        leagues.map((item: any) =>
+                            <p>{item}</p>
+                        )
+                    }
+                </Container>
+            }
         </>
     )
 }
