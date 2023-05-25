@@ -1,7 +1,10 @@
 import { Button } from '@mui/material';
 import Hero from '../../assets/images/hero.png';
+import { useNavigate } from 'react-router-dom';
+
 
 export default function HomeHero() {
+    let navigate = useNavigate()
     return (
         <div className="container d-flex" style={{
             height: '100vh',
@@ -16,7 +19,7 @@ export default function HomeHero() {
                     <div className='hero-text'>
                         <h1>Football news</h1>
                         <p>all football new are now in one place</p>
-                        <Button variant='contained' color='primary'>Get Started</Button>
+                        <Button variant='contained' color='primary' onClick={() => navigate('/home')}>Get Started</Button>
                     </div>
 
                 </div>

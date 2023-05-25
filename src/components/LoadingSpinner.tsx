@@ -1,11 +1,16 @@
 import '../assets/css/style.css';
+import { CSSProperties } from 'react'
 
+interface props {
+    size?: number | undefined,
+    style?: CSSProperties | undefined
+}
 
-export default function LoadingSpinner({ width, height, style }: any) {
+export default function LoadingSpinner({ size, style }: props) {
     return (
         <div className='text-center' style={style}>
             <span className="loader"
-                style={{ width: width ?? '48px', height: height ?? '48px' }}
+                style={{ width: size ?? '48px', height: size ?? '48px' }}
             ></span>
         </div>
     )
